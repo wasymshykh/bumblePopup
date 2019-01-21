@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bumble Popup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/modal.min.js"></script>
+
+</head>
+
+<body>
+
+
+    <div id="openit">
+        Open
+    </div>
+    <div class="beforeTransition">
+        <div class="transition-box">
+            <div class="transition-item"></div>
+            <div class="transition-item"></div>
+            <div class="transition-item"></div>
+        </div>
+    </div>
+
+    <div id="capturedbg"></div>
+
+    <div id="thePopup" class="modal">
+
+        <div id="popupbody">
+            <div class="popuptop">
+                <div class="popup-guide popup-guide-1 isActive">
+                    <div class="popup-guide-content">
+                        <i class="icon-emo">🧐</i>
+                        <p>To verify your profile, you need to take a selfie</p>
+                    </div>
+                    <div class="popup-guide-step">
+                        <p>1 of 3</p>
+                    </div>
+                </div>
+
+                <div class="popup-guide popup-guide-2">
+                    <div class="popup-guide-content">
+                        <i class="icon-emo">👈</i>
+                        <p>Copy this pose while you take your photo - don't worry, no one will see it</p>
+                    </div>
+                    <div class="popup-guide-step">
+                        <p>2 of 3</p>
+                    </div>
+                </div>
+
+                <div class="popup-guide popup-guide-3">
+                    <div class="popup-guide-content">
+                        <i class="icon-emo">💁‍</i>
+                        <p>Make sure your face is in the circle and clearly visible,
+                            so we can confirm it's you!
+                        </p>
+                    </div>
+                    <div class="popup-guide-step">
+                        <p>3 of 3</p>
+                    </div>
+                </div>
+
+                <div class="popup-bottom-line">
+                    <p>And that's it 🤳 You're officially camera-ready!</p>
+                </div>
+
+
+                <div class="popup-main">
+                    <div class="popup-sample">
+                        <img src="img/sample-img-1.jpg">
+                    </div>
+                    <div class="popup-actual">
+                        <div class="popup-face-round"></div>
+                        <div class="popup-webcam">
+                            <!-- PUT CODE FOR WEBCAM VIDEO HERE -->
+                            <img src="img/sample-img-2.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popupbottom">
+                <p id="gonext">Next</p>
+            </div>
+
+            <div class="popupcount">
+                <span class="number_3">3</span>
+                <span class="number_2">2</span>
+                <span class="number_1">1</span>
+            </div>
+
+
+            <div class="popupafter removedOk">
+                <div class="capturedImages">
+                    <div class="cI-box">
+                        <img src="img/sample-img-1.jpg">
+                    </div>
+                    <div class="cI-box">
+                        <img src="img/sample-img-2.jpg">
+                    </div>
+                </div>
+                <div class="popupafter-text">
+                    <h3>How's it looking?</h3>
+                    <ul>
+                        <li>Is your face clearly visible</li>
+                        <li>Does your pose match the example?</li>
+                    </ul>
+                    <p id="closeit">Looks Good</p>
+                    <div id="loadit" class="isRemoved">
+                        <div class="transition-box">
+                            <div class="transition-item"></div>
+                            <div class="transition-item"></div>
+                            <div class="transition-item"></div>
+                        </div>
+                    </div>
+                    <p id="stepskip">Have another go</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#openit').on('click', () => {
+            document.querySelector('.beforeTransition').classList.add('isActive')
+            setTimeout(() => {
+                document.querySelector('.beforeTransition').classList.remove('isActive')
+                $('#thePopup').modal();
+            }, 1000);
+        })
+    </script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
