@@ -3,6 +3,47 @@ body {
     padding: 0;
 }
 
+.capture-contain {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 0;
+    align-items: center;
+}
+
+.capture-img {
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+.capture-img img {
+    width: 100%;
+    height: auto;
+}
+
+.capture-contain #openit {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    background: #117af3 url(../img/camera-icon.png) no-repeat;
+    background-size: 12%;
+    background-position: 14px center;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 8px 24px 8px 44px;
+    border-radius: 4em;
+    transition: 0.2s all;
+}
+.capture-contain #openit:hover {
+    background: #0f6bd3 url(../img/camera-icon.png) no-repeat;
+    background-size: 15%;
+    background-position: 12px center;
+}
+
 .beforeTransition {
     width: 100%;
     height: 100%;
